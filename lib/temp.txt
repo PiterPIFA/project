@@ -1,0 +1,19 @@
+ CarouselSlider(
+        options: CarouselOptions(height: 200.0),
+        items: [
+          'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
+          'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
+          'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
+          'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
+          'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'
+        ].map((i) {
+          return Builder(
+            builder: (BuildContext context) {
+              return Container(
+                  width: MediaQuery.of(context).size.width,
+                  margin: EdgeInsets.symmetric(horizontal: 5.0),
+                  child: SizedBox());
+            },
+          );
+        }).toList(),
+      ),

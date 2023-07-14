@@ -20,11 +20,18 @@ class _RegisterStates extends State<Register> {
           children: [
             Container(
               width: MediaQuery.of(context).size.width / 4,
-              height: MediaQuery.of(context).size.height / 4,
+              height: MediaQuery.of(context).size.height / 5,
             ),
-            Text("Register"),
+            Icon(
+              Icons.book,
+              size: 75,
+            ),
+            Text(
+              "KOMIK",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
+            ),
             SizedBox(
-              width: MediaQuery.of(context).size.width / 2,
+              width: MediaQuery.of(context).size.width / 1.5,
               child: TextField(
                   keyboardType: TextInputType.emailAddress,
                   controller: TextEditingController(),
@@ -33,9 +40,14 @@ class _RegisterStates extends State<Register> {
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(11),
                           borderSide: BorderSide(color: Colors.black)),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(11),
+                        borderSide:
+                            BorderSide(color: Color.fromARGB(255, 73, 255, 94)),
+                      ),
                       prefixIcon: Icon(
                         Icons.email,
-                        color: Colors.black,
+                        color: Colors.white,
                       )),
                   style: TextStyle(color: Colors.black)),
             ),
@@ -43,7 +55,7 @@ class _RegisterStates extends State<Register> {
               height: 10,
             ),
             SizedBox(
-              width: MediaQuery.of(context).size.width / 2,
+              width: MediaQuery.of(context).size.width / 1.5,
               child: TextField(
                 obscureText: _isObscure,
                 decoration: InputDecoration(
@@ -51,9 +63,15 @@ class _RegisterStates extends State<Register> {
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(11),
                         borderSide: BorderSide(color: Colors.black)),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(11),
+                      borderSide:
+                          BorderSide(color: Color.fromARGB(255, 73, 255, 94)),
+                    ),
                     suffixIcon: IconButton(
                       icon: Icon(
                         _isObscure ? Icons.visibility : Icons.visibility_off,
+                        color: Colors.white,
                       ),
                       onPressed: () {
                         setState(() {
@@ -63,7 +81,7 @@ class _RegisterStates extends State<Register> {
                     ),
                     prefixIcon: Icon(
                       Icons.lock,
-                      color: Colors.black,
+                      color: Colors.white,
                     )),
               ),
             ),
@@ -71,7 +89,7 @@ class _RegisterStates extends State<Register> {
               height: 10,
             ),
             SizedBox(
-              width: MediaQuery.of(context).size.width / 2,
+              width: MediaQuery.of(context).size.width / 1.5,
               child: TextField(
                 obscureText: _isObscure,
                 decoration: InputDecoration(
@@ -79,6 +97,11 @@ class _RegisterStates extends State<Register> {
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(11),
                         borderSide: BorderSide(color: Colors.black)),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(11),
+                      borderSide:
+                          BorderSide(color: Color.fromARGB(255, 73, 255, 94)),
+                    ),
                     suffixIcon: IconButton(
                       icon: Icon(
                         _isObscure ? Icons.visibility : Icons.visibility_off,
@@ -91,7 +114,7 @@ class _RegisterStates extends State<Register> {
                     ),
                     prefixIcon: Icon(
                       Icons.lock,
-                      color: Colors.black,
+                      color: Colors.white,
                     )),
               ),
             ),
@@ -102,6 +125,9 @@ class _RegisterStates extends State<Register> {
                 height: 40,
                 width: 200,
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Color.fromARGB(255, 99, 218, 103),
+                      foregroundColor: Colors.white),
                   onPressed: () {
                     Navigator.of(context)
                         .push(MaterialPageRoute(builder: (context) {
