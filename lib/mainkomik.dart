@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:last/episode.dart';
 import 'package:last/login.dart';
 import 'package:last/liked.dart';
+import 'package:last/categorybar.dart';
+
 import 'package:last/profilebar.dart';
 
 import 'package:like_button/like_button.dart';
@@ -54,11 +56,11 @@ class _MainState extends State<Main> {
             scrollDirection: Axis.horizontal,
           ),
           items: [
-            'https://img.goldposter.com/2022/10/lookism_poster_goldposter_com_1.jpg?x-oss-process=image/resize,m_fill,h_450,w_800/quality,q_80',
-            'https://img.goldposter.com/2022/10/lookism_poster_goldposter_com_1.jpg?x-oss-process=image/resize,m_fill,h_450,w_800/quality,q_80',
-            'https://img.goldposter.com/2022/10/lookism_poster_goldposter_com_1.jpg?x-oss-process=image/resize,m_fill,h_450,w_800/quality,q_80',
-            'https://img.goldposter.com/2022/10/lookism_poster_goldposter_com_1.jpg?x-oss-process=image/resize,m_fill,h_450,w_800/quality,q_80',
-            'https://img.goldposter.com/2022/10/lookism_poster_goldposter_com_1.jpg?x-oss-process=image/resize,m_fill,h_450,w_800/quality,q_80'
+            "assets/top1.jpeg",
+            "assets/top2.jpeg",
+            "assets/top3.jpeg",
+            "assets/top4.jpeg",
+            "assets/top5.jpeg"
           ].map((i) {
             return Builder(
               builder: (BuildContext context) {
@@ -81,7 +83,10 @@ class _MainState extends State<Main> {
                           return Episode();
                         }));
                       },
-                      child: Image.network(i)),
+                      child: Image.asset(
+                        i,
+                        fit: BoxFit.cover,
+                      )),
                 );
               },
             );
@@ -101,11 +106,11 @@ class _MainState extends State<Main> {
             reverse: false,
           ),
           items: [
-            'https://upload.wikimedia.org/wikipedia/id/1/17/Lookism_Volume_1_Cover.jpg',
-            'https://upload.wikimedia.org/wikipedia/id/1/17/Lookism_Volume_1_Cover.jpg',
-            'https://upload.wikimedia.org/wikipedia/id/1/17/Lookism_Volume_1_Cover.jpg',
-            'https://upload.wikimedia.org/wikipedia/id/1/17/Lookism_Volume_1_Cover.jpg',
-            'https://upload.wikimedia.org/wikipedia/id/1/17/Lookism_Volume_1_Cover.jpg'
+            ["assets/lookism.jpeg", "Lookism"],
+            ["assets/eggnoid.jpeg", "Eggnoid"],
+            ["assets/weakhero.jpeg", "Weak Hero"],
+            ["assets/truebeauty.jpeg", "True Beauty"],
+            ["assets/killstagram.jpeg", "Killstagram"]
           ].map((i) {
             return Builder(
               builder: (BuildContext context) {
@@ -113,29 +118,28 @@ class _MainState extends State<Main> {
                     child: Column(
                   children: [
                     ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          padding: EdgeInsets.zero,
-                          backgroundColor: Colors.transparent,
-                          foregroundColor: Colors.black,
-                          elevation: 0,
-                          side: const BorderSide(
-                            width: 1.0,
-                            color: Colors.transparent,
-                          )),
-                      onPressed: () {
-                        Navigator.of(context)
-                            .push(MaterialPageRoute(builder: (context) {
-                          return Episode();
-                        }));
-                      },
-                      clipBehavior: Clip.antiAlias,
-                      child: Image.network(
-                        i,
-                        height: 140,
-                        width: 100,
-                      ),
-                    ),
-                    Text("Judul"),
+                        style: ElevatedButton.styleFrom(
+                            padding: EdgeInsets.zero,
+                            backgroundColor: Colors.transparent,
+                            foregroundColor: Colors.black,
+                            elevation: 0,
+                            side: const BorderSide(
+                              width: 1.0,
+                              color: Colors.transparent,
+                            )),
+                        onPressed: () {
+                          Navigator.of(context)
+                              .push(MaterialPageRoute(builder: (context) {
+                            return Episode();
+                          }));
+                        },
+                        clipBehavior: Clip.antiAlias,
+                        child: Image.asset(
+                          i[0],
+                          width: 100,
+                          height: 130,
+                        )),
+                    Text(i[1]),
                     LikeButton()
                   ],
                 ));
@@ -157,11 +161,9 @@ class _MainState extends State<Main> {
             reverse: false,
           ),
           items: [
-            'https://upload.wikimedia.org/wikipedia/id/1/17/Lookism_Volume_1_Cover.jpg',
-            'https://upload.wikimedia.org/wikipedia/id/1/17/Lookism_Volume_1_Cover.jpg',
-            'https://upload.wikimedia.org/wikipedia/id/1/17/Lookism_Volume_1_Cover.jpg',
-            'https://upload.wikimedia.org/wikipedia/id/1/17/Lookism_Volume_1_Cover.jpg',
-            'https://upload.wikimedia.org/wikipedia/id/1/17/Lookism_Volume_1_Cover.jpg'
+            ["assets/eggnoid.jpeg", "Eggnoid"],
+            ["assets/lookism.jpeg", "Lookism"],
+            ["assets/towerofgod.jpeg", "Tower of God"],
           ].map((i) {
             return Builder(
               builder: (BuildContext context) {
@@ -169,29 +171,28 @@ class _MainState extends State<Main> {
                     child: Column(
                   children: [
                     ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          padding: EdgeInsets.zero,
-                          backgroundColor: Colors.transparent,
-                          foregroundColor: Colors.black,
-                          elevation: 0,
-                          side: const BorderSide(
-                            width: 1.0,
-                            color: Colors.transparent,
-                          )),
-                      onPressed: () {
-                        Navigator.of(context)
-                            .push(MaterialPageRoute(builder: (context) {
-                          return Episode();
-                        }));
-                      },
-                      clipBehavior: Clip.antiAlias,
-                      child: Image.network(
-                        i,
-                        height: 140,
-                        width: 100,
-                      ),
-                    ),
-                    Text("Judul"),
+                        style: ElevatedButton.styleFrom(
+                            padding: EdgeInsets.zero,
+                            backgroundColor: Colors.transparent,
+                            foregroundColor: Colors.black,
+                            elevation: 0,
+                            side: const BorderSide(
+                              width: 1.0,
+                              color: Colors.transparent,
+                            )),
+                        onPressed: () {
+                          Navigator.of(context)
+                              .push(MaterialPageRoute(builder: (context) {
+                            return Episode();
+                          }));
+                        },
+                        clipBehavior: Clip.antiAlias,
+                        child: Image.asset(
+                          i[0],
+                          width: 100,
+                          height: 130,
+                        )),
+                    Text(i[1]),
                     LikeButton()
                   ],
                 ));
@@ -213,11 +214,9 @@ class _MainState extends State<Main> {
             reverse: false,
           ),
           items: [
-            'https://upload.wikimedia.org/wikipedia/id/1/17/Lookism_Volume_1_Cover.jpg',
-            'https://upload.wikimedia.org/wikipedia/id/1/17/Lookism_Volume_1_Cover.jpg',
-            'https://upload.wikimedia.org/wikipedia/id/1/17/Lookism_Volume_1_Cover.jpg',
-            'https://upload.wikimedia.org/wikipedia/id/1/17/Lookism_Volume_1_Cover.jpg',
-            'https://upload.wikimedia.org/wikipedia/id/1/17/Lookism_Volume_1_Cover.jpg'
+            ["assets/truebeauty.jpeg", "True Beauty"],
+            ["assets/thesecondmarriage.jpeg", "The Second Marriage"],
+            ["assets/operationtruelove.jpeg", "Operation True Love"],
           ].map((i) {
             return Builder(
               builder: (BuildContext context) {
@@ -225,29 +224,28 @@ class _MainState extends State<Main> {
                     child: Column(
                   children: [
                     ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          padding: EdgeInsets.zero,
-                          backgroundColor: Colors.transparent,
-                          foregroundColor: Colors.black,
-                          elevation: 0,
-                          side: const BorderSide(
-                            width: 1.0,
-                            color: Colors.transparent,
-                          )),
-                      onPressed: () {
-                        Navigator.of(context)
-                            .push(MaterialPageRoute(builder: (context) {
-                          return Episode();
-                        }));
-                      },
-                      clipBehavior: Clip.antiAlias,
-                      child: Image.network(
-                        i,
-                        height: 140,
-                        width: 100,
-                      ),
-                    ),
-                    Text("Judul"),
+                        style: ElevatedButton.styleFrom(
+                            padding: EdgeInsets.zero,
+                            backgroundColor: Colors.transparent,
+                            foregroundColor: Colors.black,
+                            elevation: 0,
+                            side: const BorderSide(
+                              width: 1.0,
+                              color: Colors.transparent,
+                            )),
+                        onPressed: () {
+                          Navigator.of(context)
+                              .push(MaterialPageRoute(builder: (context) {
+                            return Episode();
+                          }));
+                        },
+                        clipBehavior: Clip.antiAlias,
+                        child: Image.asset(
+                          i[0],
+                          width: 100,
+                          height: 130,
+                        )),
+                    Text(i[1]),
                     LikeButton()
                   ],
                 ));
@@ -257,9 +255,7 @@ class _MainState extends State<Main> {
         ),
       ],
     ),
-    Center(
-      child: Text("Categorylxpox"),
-    ),
+    Category(),
     Profile()
   ];
   @override
@@ -306,8 +302,8 @@ class _MainState extends State<Main> {
             label: 'Category',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Account',
+            icon: Icon(Icons.more_horiz),
+            label: 'Other',
           ),
         ],
         selectedItemColor: Colors.white,

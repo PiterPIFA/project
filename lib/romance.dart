@@ -5,17 +5,17 @@ import 'login.dart';
 import 'mainkomik.dart';
 import 'episode.dart';
 
-class Liked extends StatefulWidget {
+class Romance extends StatefulWidget {
   bool _isObscure = false;
   @override
-  _LikedStates createState() => _LikedStates();
+  _RomanceStates createState() => _RomanceStates();
 }
 
-class _LikedStates extends State<Liked> {
+class _RomanceStates extends State<Romance> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(leading: null, title: Text('Favorite')),
+      appBar: AppBar(leading: null, title: Text('Category Romance')),
       body: Center(
         child: Column(
           children: [
@@ -25,35 +25,6 @@ class _LikedStates extends State<Liked> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Container(
-                    child: Column(
-                  children: [
-                    ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            padding: EdgeInsets.zero,
-                            backgroundColor: Colors.transparent,
-                            foregroundColor: Colors.black,
-                            elevation: 0,
-                            side: const BorderSide(
-                              width: 1.0,
-                              color: Colors.transparent,
-                            )),
-                        onPressed: () {
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (context) {
-                            return Episode();
-                          }));
-                        },
-                        clipBehavior: Clip.antiAlias,
-                        child: Image.asset(
-                          "assets/Eggnoid.jpeg",
-                          width: 100,
-                          height: 130,
-                        )),
-                    Text("Eggnoid"),
-                    LikeButton()
-                  ],
-                )),
                 Container(
                     child: Column(
                   children: [
@@ -104,11 +75,40 @@ class _LikedStates extends State<Liked> {
                         },
                         clipBehavior: Clip.antiAlias,
                         child: Image.asset(
-                          "assets/killstagram.jpeg",
+                          "assets/thesecondmarriage.jpeg",
                           width: 100,
                           height: 130,
                         )),
-                    Text("Killstagram"),
+                    Text("The Second Marriage"),
+                    LikeButton()
+                  ],
+                )),
+                Container(
+                    child: Column(
+                  children: [
+                    ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            padding: EdgeInsets.zero,
+                            backgroundColor: Colors.transparent,
+                            foregroundColor: Colors.black,
+                            elevation: 0,
+                            side: const BorderSide(
+                              width: 1.0,
+                              color: Colors.transparent,
+                            )),
+                        onPressed: () {
+                          Navigator.of(context)
+                              .push(MaterialPageRoute(builder: (context) {
+                            return Episode();
+                          }));
+                        },
+                        clipBehavior: Clip.antiAlias,
+                        child: Image.asset(
+                          "assets/operationtruelove.jpeg",
+                          width: 100,
+                          height: 130,
+                        )),
+                    Text("Operation True Love"),
                     LikeButton()
                   ],
                 )),

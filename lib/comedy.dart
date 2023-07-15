@@ -5,17 +5,17 @@ import 'login.dart';
 import 'mainkomik.dart';
 import 'episode.dart';
 
-class Liked extends StatefulWidget {
+class Comedy extends StatefulWidget {
   bool _isObscure = false;
   @override
-  _LikedStates createState() => _LikedStates();
+  _ComedyStates createState() => _ComedyStates();
 }
 
-class _LikedStates extends State<Liked> {
+class _ComedyStates extends State<Comedy> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(leading: null, title: Text('Favorite')),
+      appBar: AppBar(leading: null, title: Text('Category Comedy')),
       body: Center(
         child: Column(
           children: [
@@ -46,11 +46,11 @@ class _LikedStates extends State<Liked> {
                         },
                         clipBehavior: Clip.antiAlias,
                         child: Image.asset(
-                          "assets/Eggnoid.jpeg",
+                          "assets/siocong.jpeg",
                           width: 100,
                           height: 130,
                         )),
-                    Text("Eggnoid"),
+                    Text("Si Ocong"),
                     LikeButton()
                   ],
                 )),
@@ -75,11 +75,11 @@ class _LikedStates extends State<Liked> {
                         },
                         clipBehavior: Clip.antiAlias,
                         child: Image.asset(
-                          "assets/truebeauty.jpeg",
+                          "assets/justfriend.jpeg",
                           width: 100,
                           height: 130,
                         )),
-                    Text("True Beauty"),
+                    Text("Just Friend"),
                     LikeButton()
                   ],
                 )),
@@ -104,11 +104,11 @@ class _LikedStates extends State<Liked> {
                         },
                         clipBehavior: Clip.antiAlias,
                         child: Image.asset(
-                          "assets/killstagram.jpeg",
+                          "assets/kesantet.jpeg",
                           width: 100,
                           height: 130,
                         )),
-                    Text("Killstagram"),
+                    Text("Ops Ke Santet"),
                     LikeButton()
                   ],
                 )),

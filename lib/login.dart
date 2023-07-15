@@ -96,6 +96,9 @@ class _LoginState extends State<Login> {
                 width: 200,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
+                      shadowColor: Colors.lightGreen,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30)),
                       backgroundColor: Color.fromARGB(255, 99, 218, 103),
                       foregroundColor: Colors.white),
                   onPressed: () {

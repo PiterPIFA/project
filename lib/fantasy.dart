@@ -5,17 +5,17 @@ import 'login.dart';
 import 'mainkomik.dart';
 import 'episode.dart';
 
-class Liked extends StatefulWidget {
+class Fantasy extends StatefulWidget {
   bool _isObscure = false;
   @override
-  _LikedStates createState() => _LikedStates();
+  _FantasyStates createState() => _FantasyStates();
 }
 
-class _LikedStates extends State<Liked> {
+class _FantasyStates extends State<Fantasy> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(leading: null, title: Text('Favorite')),
+      appBar: AppBar(leading: null, title: Text('Category Fantasy')),
       body: Center(
         child: Column(
           children: [
@@ -46,11 +46,11 @@ class _LikedStates extends State<Liked> {
                         },
                         clipBehavior: Clip.antiAlias,
                         child: Image.asset(
-                          "assets/Eggnoid.jpeg",
+                          "assets/lookism.jpeg",
                           width: 100,
                           height: 130,
                         )),
-                    Text("Eggnoid"),
+                    Text("Lookism"),
                     LikeButton()
                   ],
                 )),
@@ -75,11 +75,11 @@ class _LikedStates extends State<Liked> {
                         },
                         clipBehavior: Clip.antiAlias,
                         child: Image.asset(
-                          "assets/truebeauty.jpeg",
+                          "assets/eggnoid.jpeg",
                           width: 100,
                           height: 130,
                         )),
-                    Text("True Beauty"),
+                    Text("Tower of God"),
                     LikeButton()
                   ],
                 )),
@@ -104,11 +104,11 @@ class _LikedStates extends State<Liked> {
                         },
                         clipBehavior: Clip.antiAlias,
                         child: Image.asset(
-                          "assets/killstagram.jpeg",
+                          "assets/towerofgod.jpeg",
                           width: 100,
                           height: 130,
                         )),
-                    Text("Killstagram"),
+                    Text("towerofgod"),
                     LikeButton()
                   ],
                 )),

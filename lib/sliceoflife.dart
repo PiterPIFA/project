@@ -5,17 +5,17 @@ import 'login.dart';
 import 'mainkomik.dart';
 import 'episode.dart';
 
-class Liked extends StatefulWidget {
+class Life extends StatefulWidget {
   bool _isObscure = false;
   @override
-  _LikedStates createState() => _LikedStates();
+  _LifeStates createState() => _LifeStates();
 }
 
-class _LikedStates extends State<Liked> {
+class _LifeStates extends State<Life> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(leading: null, title: Text('Favorite')),
+      appBar: AppBar(leading: null, title: Text('Category Slice of Life')),
       body: Center(
         child: Column(
           children: [
@@ -46,11 +46,11 @@ class _LikedStates extends State<Liked> {
                         },
                         clipBehavior: Clip.antiAlias,
                         child: Image.asset(
-                          "assets/Eggnoid.jpeg",
+                          "assets/gula gula.jpeg",
                           width: 100,
                           height: 130,
                         )),
-                    Text("Eggnoid"),
+                    Text("gulagula"),
                     LikeButton()
                   ],
                 )),
@@ -75,11 +75,11 @@ class _LikedStates extends State<Liked> {
                         },
                         clipBehavior: Clip.antiAlias,
                         child: Image.asset(
-                          "assets/truebeauty.jpeg",
+                          "assets/hertweenbrother.jpeg",
                           width: 100,
                           height: 130,
                         )),
-                    Text("True Beauty"),
+                    Text("Her Tween Brother"),
                     LikeButton()
                   ],
                 )),
@@ -104,11 +104,11 @@ class _LikedStates extends State<Liked> {
                         },
                         clipBehavior: Clip.antiAlias,
                         child: Image.asset(
-                          "assets/killstagram.jpeg",
+                          "assets/badwordbaby.jpeg",
                           width: 100,
                           height: 130,
                         )),
-                    Text("Killstagram"),
+                    Text("Bad Word Baby"),
                     LikeButton()
                   ],
                 )),
